@@ -14,7 +14,7 @@ class  Window(QMainWindow):
      super().__init__()
      #Setting the title
      self.setWindowTitle("LOAN CALCULATOR")
-     #Set Geometry App
+     #Set Geometry App  
      self.width=400
      self.height=500
      self.setGeometry(100,100,self.width,self.height)
@@ -50,6 +50,10 @@ class  Window(QMainWindow):
     
      i_Label.setFont(QFont('Times',9))
      
+     #A corresponding input field for input label
+     self.rate=QLineEdit()
+     onlyInt= QIntValidator()# Validation for interest  rate  such that only integers are allowed
+     self.rate.setValidator(onlyInt)
      
 #Create app object
 
