@@ -144,15 +144,18 @@ class  Window(QMainWindow):
      self.t_payment =QLabel(self)
      
      self.t_payment.setAlignment(Qt.AlignCenter)
-     self.t_payment.setGeometry(50,340,300,60)
+     self.t_payment.setGeometry(50,410,300,60)
      self.t_payment.setStyleSheet("QLabel" "{"
                                       "border: 3px solid black;"
                                       "background:white"
                                       "}"
                                      )
-    
+
      self.t_payment.setFont(QFont('Times',11))
      
+     
+ def calculate_action():
+        pass
      
 #Create app object
 
