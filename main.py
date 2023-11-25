@@ -63,16 +63,17 @@ class  Window(QMainWindow):
      self.rate.setFont(QFont('Times',9))
      
      #Number of years 
+     n_Label=QLabel()
      n_years =QLabel("Years",self)
-     i_Label.setAlignment(Qt.AlignCenter)
-     i_Label.setGeometry(20,100,170,40)
-     i_Label.setStyleSheet("QLabel" "{"
+     n_Label.setAlignment(Qt.AlignCenter)
+     n_Label.setGeometry(20,150,170,40)
+     n_Label.setStyleSheet("QLabel" "{"
                                       "border: 2px solid black;"
                                       "background:rgba(70,70,70,35);"
                                       "}"
                                      )
     
-     i_Label.setFont(QFont('Times',9))
+     n_Label.setFont(QFont('Times',9))
      
      #A corresponding input field for number of years
      self.years=QLineEdit(self)
@@ -82,7 +83,7 @@ class  Window(QMainWindow):
      
      #Setting properties  for the Input field
      
-     self.years.setGeometry(200,100,180,40)
+     self.years.setGeometry(200,150,180,40)
      self.years.setAlignment(Qt.AlignCenter)
      self.years.setFont(QFont('Times',9))
      
