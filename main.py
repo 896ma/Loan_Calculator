@@ -74,17 +74,17 @@ class  Window(QMainWindow):
     
      i_Label.setFont(QFont('Times',9))
      
-     #A corresponding input field for input label
-     self.rate=QLineEdit(self)
+     #A corresponding input field for number of years
+     self.years=QLineEdit(self)
      onlyInt= QIntValidator()# Validation for interest  rate  such that only integers are allowed
-     self.rate.setValidator(onlyInt)
+     self.years.setValidator(onlyInt)
      
      
      #Setting properties  for the Input field
      
-     self.rate.setGeometry(200,100,180,40)
-     self.rate.setAlignment(Qt.AlignCenter)
-     self.rate.setFont(QFont('Times',9))
+     self.years.setGeometry(200,100,180,40)
+     self.years.setAlignment(Qt.AlignCenter)
+     self.years.setFont(QFont('Times',9))
      
      
 #Create app object
