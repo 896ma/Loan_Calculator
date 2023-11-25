@@ -25,7 +25,7 @@ class  Window(QMainWindow):
      
  #Function to add  widgets
  def UIComponents(self):
-     head=QLabel ("Loan  Calculator \n CYBER BANK" ,self)
+     head=QLabel ("G_oaTeD \n CyBer BanK" ,self)
      head.setGeometry(0,10,400,60)
      font =QFont('Times' ,15)
      font.setBold(True)
@@ -63,8 +63,8 @@ class  Window(QMainWindow):
      self.rate.setFont(QFont('Times',9))
      
      #Number of years 
-     n_Label=QLabel()
-     n_years =QLabel("Years",self)
+  
+     n_Label =QLabel("Years",self)
      n_Label.setAlignment(Qt.AlignCenter)
      n_Label.setGeometry(20,150,170,40)
      n_Label.setStyleSheet("QLabel" "{"
@@ -86,6 +86,39 @@ class  Window(QMainWindow):
      self.years.setGeometry(200,150,180,40)
      self.years.setAlignment(Qt.AlignCenter)
      self.years.setFont(QFont('Times',9))
+     
+     
+     #Create  a  Loan mount LAbel
+     a_Label=QLabel("Amount",self)
+     a_Label.setAlignment(Qt.AlignCenter)
+     a_Label.setGeometry(20,200,170,40)
+     a_Label.setStyleSheet("QLabel" "{"
+                                      "border: 2px solid black;"
+                                      "background:rgba(70,70,70,35);"
+                                      "}"
+                                     )
+    
+     a_Label.setFont(QFont('Times',9))
+     
+     #A corresponding input field for the Loan amount
+     self.amount=QLineEdit(self)
+     onlyInt= QIntValidator()# Validation for interest  rate  such that only integers are allowed
+     self.amount.setValidator(onlyInt)
+     
+     
+     #Setting properties  for the Input field
+     
+     self.amount.setGeometry(200,200,180,40)
+     self.amount.setAlignment(Qt.AlignCenter)
+     self.amount.setFont(QFont('Times',9))
+     
+     
+     
+     #/////////Calculate Payment ///////
+     #Creating compute Button
+     calculate =QPushButton("Compute Payment",self)
+     #Set Geometry for the PushButton
+     
      
      
 #Create app object
