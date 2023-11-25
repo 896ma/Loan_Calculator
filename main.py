@@ -157,10 +157,41 @@ class  Window(QMainWindow):
  def calculate_action(self):
        
        #Getting Annual interest rate
-       annnualInterestRate  = self.rate.text()
+       annualInterestRate  = self.rate.text()
        #To check if fileds are empty
-       if len(annnualInterestRate)==0 or  annnualInterestRate=='0':
+       if len(annualInterestRate)==0 or  annualInterestRate=='0':
            QMessageBox.critical(self,"Error!","Input Fields cannot be Empty or set to zero ")
+           
+          #Getting Annual interest rate
+       numberofyears = self.years.text()
+       #To check if fileds are empty
+       if len(numberofyears)==0 or  numberofyears=='0':
+           QMessageBox.critical(self,"Error!","Input Fields cannot be Empty or set to zero ")
+        
+          #Getting Annual interest rate
+       loanAmount = self.amount.text()
+       #To check if fileds are empty
+       if len(loanAmount)==0 or loanAmount=='0':
+           QMessageBox.critical(self,"Error!","Input Fields cannot be Empty or set to zero ")
+           
+        #Get calculations
+        #Convert text into integers
+       annualInterestRate= int(annualInterestRate)
+       numberofyears= int(numberofyears)
+       loanAmount= int(loanAmount)
+       
+       
+       #Monthly Interest Calculation(12monthsx100%)
+       monthlyInterestRate =annualInterestRate/1200
+       
+       #calculate monthly payment
+       monthlyPayment=loanAmount * monthlyInterestRate /  (1-1 /(1+ monthlyInterestRate) ** (numberofyears *12))
+       
+       #Monthly payment format(2dp float)
+       
+       
+       
+       
 #Create app object
 
 App = QApplication(sys.argv)
