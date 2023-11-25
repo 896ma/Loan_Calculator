@@ -130,14 +130,30 @@ class  Window(QMainWindow):
      self.m_payment =QLabel(self)
      
      self.m_payment.setAlignment(Qt.AlignCenter)
-     self.m_payment.setGeometry(20,200,170,40)
+     self.m_payment.setGeometry(50,340,300,60)
      self.m_payment.setStyleSheet("QLabel" "{"
-                                      "border: 2px solid black;"
-                                      "background:rgba(70,70,70,35);"
+                                      "border: 3px solid black;"
+                                      "background:white"
                                       "}"
                                      )
     
-     self.m_payment.setFont(QFont('Times',9))
+     self.m_payment.setFont(QFont('Times',11))
+     
+     
+     #Total Payment label
+     self.t_payment =QLabel(self)
+     
+     self.t_payment.setAlignment(Qt.AlignCenter)
+     self.t_payment.setGeometry(50,340,300,60)
+     self.t_payment.setStyleSheet("QLabel" "{"
+                                      "border: 3px solid black;"
+                                      "background:white"
+                                      "}"
+                                     )
+    
+     self.t_payment.setFont(QFont('Times',11))
+     
+     
 #Create app object
 
 App = QApplication(sys.argv)
