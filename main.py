@@ -154,9 +154,13 @@ class  Window(QMainWindow):
      self.t_payment.setFont(QFont('Times',11))
      
      
- def calculate_action():
-        pass
-     
+ def calculate_action(self):
+       
+       #Getting Annual interest rate
+       annnualInterestRate  = self.rate.text()
+       #To check if fileds are empty
+       if len(annnualInterestRate)==0 or  annnualInterestRate=='0':
+           QMessageBox.critical(self,"Error!","Input Fields cannot be Empty or set to zero ")
 #Create app object
 
 App = QApplication(sys.argv)
