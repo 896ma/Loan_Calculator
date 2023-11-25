@@ -37,7 +37,7 @@ class  Window(QMainWindow):
      
      #interest Label
      
-     i_Label= QLabel("Annual Interest" ,self)
+     i_Label= QLabel("Annual Interest(%)" ,self)
      #properties
      
      i_Label.setAlignment(Qt.AlignCenter)
@@ -188,9 +188,14 @@ class  Window(QMainWindow):
        monthlyPayment=loanAmount * monthlyInterestRate /  (1-1 /(1+ monthlyInterestRate) ** (numberofyears *12))
        
        #Monthly payment format(2dp float)
+       monthlyPayment ="{:.2f}".format(monthlyPayment)
+       #Set  monthlypayment as text plus the calculation
        
-       
-       
+       self.m_payment.setText("Monthly Payment (Ksh) :"+ str(monthlyPayment))
+        #Getting total Payment
+       totalPayment= float(monthlyPayment) *12* numberofyears
+       totalPayment ="{:.2f}".format(totalPayment)
+       self.t_payment.setText("Total Payment(Ksh) :"+ str(totalPayment))
        
 #Create app object
 
