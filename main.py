@@ -127,7 +127,17 @@ class  Window(QMainWindow):
      #Monthly payment calculation
      
      
-     self
+     self.m_payment =QLabel(self)
+     
+     self.m_payment.setAlignment(Qt.AlignCenter)
+     self.m_payment.setGeometry(20,200,170,40)
+     self.m_payment.setStyleSheet("QLabel" "{"
+                                      "border: 2px solid black;"
+                                      "background:rgba(70,70,70,35);"
+                                      "}"
+                                     )
+    
+     self.m_payment.setFont(QFont('Times',9))
 #Create app object
 
 App = QApplication(sys.argv)
