@@ -118,9 +118,16 @@ class  Window(QMainWindow):
      #Creating compute Button
      calculate =QPushButton("Compute Payment",self)
      #Set Geometry for the PushButton
+     calculate.setGeometry(125,270,150,40)
+     
+     #Add action to the button 
+     calculate.clicked.connect(self.calculate_action)
+     #////////output Widgets///
+     
+     #Monthly payment calculation
      
      
-     
+     self
 #Create app object
 
 App = QApplication(sys.argv)
