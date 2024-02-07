@@ -115,7 +115,7 @@ class  Window(QMainWindow):
      
      
      #/////////Calculate Payment ///////
-     #Creating compute Butt
+     #Creating compute Button
      calculate =QPushButton("Compute Payment",self)
      #Set Geometry for the PushButton
      calculate.setGeometry(125,270,150,40)
