@@ -5,7 +5,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import 
 
 import sys
- 
+  
  
 class  Window(QMainWindow):
     #Creating a constructor 
