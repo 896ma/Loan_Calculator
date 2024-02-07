@@ -81,7 +81,7 @@ class  Window(QMainWindow):
      self.years.setValidator(onlyInt)
      
      
-     #Setting properties  for the Input 
+     #Setting properties  for the Input fi
      
      self.years.setGeometry(200,150,180,40)
      self.years.setAlignment(Qt.AlignCenter)
