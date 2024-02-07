@@ -50,7 +50,7 @@ class  Window(QMainWindow):
     
      i_Label.setFont(QFont('Times',9))
      
-     #A corresponding input field for input 
+     #A corresponding input field for input label
      self.rate=QLineEdit(self)
      onlyInt= QIntValidator()# Validation for interest  rate  such that only integers are allowed
      self.rate.setValidator(onlyInt)
